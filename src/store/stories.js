@@ -30,7 +30,8 @@ class Stories {
     }
 
     fetchComments(commentID) {
-        return getComment(commentID)
+        
+        this.comments.push(getComment(commentID))
 
     }
     addComments(comment) {

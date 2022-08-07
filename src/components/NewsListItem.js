@@ -6,7 +6,7 @@ const NewsListItem = ({ article }) => {
   return (
     <div className='flex_wrapper'>
       <div>
-        {console.log(article.data)}
+       
         <Link className='title' to={`/${article.data.id}`} article={article.data}><h3>{article.data.title}</h3></Link>
 
         <p className='score'>Score: {article.data.score}</p>

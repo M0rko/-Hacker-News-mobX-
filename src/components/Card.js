@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios';
 import stories from '../store/stories';
 import { observer } from 'mobx-react-lite'
+import { getStory } from '../apis';
 import "../styles/card.scss"
 
 const Card = observer(() => {
@@ -17,7 +18,8 @@ const Card = observer(() => {
     const story = stories.stories.find(story => story.data.id == id)
 
     useEffect(() => {
-
+        getStory(id)
+        console.log(getStory(id))
         const showComments = () => {
             try {
                 story.data.kids && (
@@ -27,9 +29,9 @@ const Card = observer(() => {
                         // //stories.comments.push(comment)
 
                         // // stories.addComments(comment)
-                       // console.log(com.by)
+                        //console.log(stories.comments)
                     }
-                    
+
                     ))
             } catch (err) {
                 console.log(err.message)
@@ -65,7 +67,7 @@ const Card = observer(() => {
         <div className='card_wrapper'>
             {stories.isLoading && <div>...</div>}
             {stories.error && console.log(stories.error)}
-            {console.log(stories.comments)}
+
 
             {
 

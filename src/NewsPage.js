@@ -8,7 +8,11 @@ import "./styles/newPage.scss"
 const NewsPage = observer(() => {
 
     useEffect(() => {
+        setTimeout(function() {
+            story.fetchStories()
+          }, 60000);
         story.fetchStories()
+        console.log("reload")
     }, [])
 
 
