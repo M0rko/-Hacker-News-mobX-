@@ -1,6 +1,5 @@
 
 import './App.css';
-import NewsPage from './NewsPage';
 import ErrorPage from "./components/ErrorPage"
 import {
   BrowserRouter as Router,
@@ -10,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import Card from './components/Card';
+import NewsPage from './components/NewsPage';
 
 
 

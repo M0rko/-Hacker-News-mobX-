@@ -1,13 +1,11 @@
 .card_wrapper{
     display: flex;
-   // flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
 }
 .card{
     background-color: #f3c148;
-    width: 600px;
+    width: 700px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -30,11 +28,14 @@
     color: #544259;
     font-size: 22px;
 }
-.go_back{
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.go_back, .reloadComments{
     width: 100px;
     height: 30px;
-    padding: 5px;
-    margin-right: 25px;
     align-items: center;
     background-color: transparent ;
     color:#544259 ;//#f5e342
@@ -44,5 +45,10 @@
     text-decoration: none;
     text-align: center;
     border:2px solid #544259;
-    margin-left: 80%;
+    cursor: pointer;
+}
+.reloadComments{
+    width: 200px;
+   border-radius: 10px;
+   
 }

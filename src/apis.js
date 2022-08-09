@@ -1,10 +1,9 @@
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 
 export const getStory = async (id) => {
     try {
-        const story = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
+        const story = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`);
         return story;
     } catch (error) {
         console.log('Error while getting a story.');
@@ -14,13 +13,13 @@ export const getStory = async (id) => {
 export const getStories = async () => {
     try {
         const { data: storyIds } = await axios.get(
-            `https://hacker-news.firebaseio.com/v0/newstories.json`
+            `https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty`
         );
         const stories = await Promise.all(storyIds.slice(0, 100).map(getStory));
+        console.log(stories)
         return stories;
     } catch (error) {
         console.log('Error while getting list of stories.');
-        //console.log(error.message)
     }
 
 };
