@@ -52,3 +52,22 @@
    border-radius: 10px;
    
 }
+.comment{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    color: #544259;
+    margin-left: 30px;
+    
+}
+.author{
+   
+    font-size: 24px;
+  
+    
+    
+}
+.treeComment{
+    margin-left: 40px;
+    color: #544259;
+}

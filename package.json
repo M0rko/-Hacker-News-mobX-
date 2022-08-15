@@ -26,7 +26,13 @@
       "react-app",
       "react-app/jest"
     ]
+    
   },
+  
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+  ,
   "browserslist": {
     "production": [
       ">0.2%",
@@ -40,6 +46,10 @@
     ]
   },
   "devDependencies": {
-    "prettier": "2.7.1"
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "prettier": "^2.7.1"
   }
 }
